@@ -1,0 +1,287 @@
+@charset "UTF-8";
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --cor0: #2A0088;
+    --cor1: #FF0000;
+    --cor2: #FF6A00;
+    --cor3: #2A0088;
+    --cor4: #00CF00;
+    --cor5: #FAFAFA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../imagens_/fundo_dosite.png.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: var(--cor0);
+    color: white;
+    padding: 20px 40px;
+    border-bottom: 4px solid var(--cor2);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.right-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 14px;
+}
+
+.right-top {
+    display: flex;
+    align-items: center;
+}
+
+.location-icon i {
+    font-size: 30px;
+    margin-right: 10px;
+    color: white;
+}
+
+.text-enter p {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.Login a {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.Login a:hover {
+    color: var(--cor2);
+}
+
+nav {
+    background-color: var(--cor5);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: var(--cor2);
+}
+
+nav::after {
+    content: '';
+    display: block;
+    height: 4px;
+    background: linear-gradient(to right, var(--cor4), var(--cor2));
+}
+
+/* Cadastro */
+.main_cadastro {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #fff;
+}
+
+.container h2 {
+    text-align: left;
+    color: var(--cor2);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+form label {
+    font-size: 14px;
+    color: var(--cor0);
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    font-size: 14px;
+    width: 100%;
+    color: #fff;
+}
+
+form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+form input:focus,
+form button:focus {
+    outline: 2px solid var(--cor2);
+}
+
+.checkbox-termos {
+    margin: 20px 0;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--cor0);
+    line-height: 1.5;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-top: 4px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.checkbox-container .texto-termos {
+    flex: 1;
+}
+
+.checkbox-container a {
+    color: var(--cor2);
+    text-decoration: underline;
+}
+
+.checkbox-container a:hover {
+    color: var(--cor1);
+}
+
+/* Botão */
+form button {
+    display: block;
+    margin: 0 0 10px 0; 
+    padding: 12px 24px;
+    background-color: var(--cor2);
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; 
+    border: none;
+    text-align: center;
+}
+
+
+/* Hover do botão */
+form button:hover {
+    background-color: #e65c00;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px 0;
+    border-top: 3px solid #FF6A00;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #FF6A00;
+}
+
+.footer-info p {
+    font-size: 12px;
+    color: #dddddd;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 25px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

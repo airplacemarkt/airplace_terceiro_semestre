@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Place - Login</title>
+    <link rel="stylesheet" href="estilos_/style_login.css"> 
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="../index.html"><img src="imagens_/drone_banner_white.png" alt="Logo AirPlace"></a>
+            </div>
+            <p class="cadastre-se"><a href="cadastro.html">Cadastre-se</a></p>
+        </div>
+    </header>
+
+    <section class="login-section">
+        <div class="login-container">
+            <h1>Bem-vindo ao Air Place</h1>
+            <p>Faça login para acessar sua conta</p>
+
+            <form action="processa_login.php" method="post" class="login-form">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+            
+                <button type="submit">Entrar</button>
+
+                <div class="extra-options">
+                    <a href="#">Esqueci minha senha</a>
+                    <a href="cadastro.html">Criar conta</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Trabalhe conosco</a></li>
+                <li><a href="#">Termos e condições</a></li>
+                <li><a href="#">Como cuidamos da sua privacidade</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer-info">
+            <p>CNPJ nº 00.000.000/0000-00 / Av. das Nações Unidas, nº 3.203, Bonfim, Osasco/SP - CEP 00000-000 - empresa do grupo AIR PLACE</p>
+        </div>
+    </footer>
+</body>
+</html>

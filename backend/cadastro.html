@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Air Place - Cadastro</title>
+    <link rel="stylesheet" href="estilos_/style_cadastro.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="imagens_/drone_banner_white.png" alt="Logo AirPlace" />
+            </div>
+            <div class="right-info">
+                <div class="right-top">
+                </div>
+                <p class="Login"><a href="login.html">Login</a></p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main_cadastro">
+        <div class="container">
+            <h2>Criar conta - Air Place</h2>
+            <form id="signupForm" method="post" action="processa_cadastro.php" autocomplete="on">
+                <label for="name">Seu nome</label>
+                <input type="text" name="name" id="name" placeholder="Nome e sobrenome" required autocomplete="name" />
+
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" required inputmode="numeric" autocomplete="off" />
+
+                <label for="email">Número de celular ou e-mail</label>
+                <input type="text" name="email" id="email" placeholder="Insira seu celular ou e-mail" required autocomplete="email" />
+
+                <label for="password">Senha</label>
+                <input type="password" name="password" id="password" placeholder="Pelo menos 6 caracteres" required autocomplete="new-password" />
+
+                <label for="confirmPassword">Confirme a senha</label>
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme sua senha" required autocomplete="new-password" />
+
+                <div class="checkbox-termos">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="termos" required />
+                        <span class="texto-termos">
+                            Ao criar uma conta, você concorda com os
+                            <a href="#">Termos de Uso</a> da Air Place. Consulte também nossa
+                            <a href="#">Política de Privacidade</a>,
+                            <a href="#">Política de Cookies</a> e
+                            <a href="#">Anúncios Baseados em Interesse</a>.
+                        </span>
+                    </label>
+                </div>
+
+                <button type="submit" aria-label="Criar conta na Air Place">Continuar</button>
+            </form>
+
+            <p>Você já tem uma conta? <a href="login.html">Fazer login</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Trabalhe conosco</a></li>
+                <li><a href="#">Termos e condições</a></li>
+                <li><a href="#">Como cuidamos da sua privacidade</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer-info">
+            <p>
+                CNPJ nº 00.000.000/0000-00 / Av. das Nações Unidas, nº 3.203, Bonfim, Osasco/SP - CEP 00000-000 - empresa do grupo AIR PLACE
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('cpf').addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            value = value.replace(/(\d{3})(\d)/, '$1.$2');
+            value = value.replace(/(\d{3})(\d)/, '$1.$2');
+            value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>
